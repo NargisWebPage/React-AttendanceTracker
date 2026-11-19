@@ -1,6 +1,6 @@
-import  React from "react";
-import UseLocalStorage from "../hook/UseLocalStorage";
 
+import React from "react";
+import UseLocalStorage from "../hook/UseLocalStorage";
 
 interface Student {
   name: string;
@@ -8,7 +8,7 @@ interface Student {
 }
 
 function AttendanceTracker() {
-  const [students, setStudents] = UseLocalStorage<Student[]>("attendance",[
+  const [students, setStudents] = UseLocalStorage<Student[]>("attendance", [
     { name: "Mokhtar", present: false },
     { name: "Zuhal", present: false },
     { name: "Samea", present: false },
@@ -33,10 +33,15 @@ function AttendanceTracker() {
   return (
     <div>
       <h2>{presentCount} of 6 present</h2>
+
       {students.map((student, index) => (
         <div key={student.name}>
           <span>{student.name} - </span>
-          <span>{student.present ? "Present" : "Absent"}</span>
+
+          <span className={student.present ? "present-text" : "absent-text"}>
+            {student.present ? "Present" : "Absent"}
+          </span>
+
           <button onClick={(e) => handleToggle(e, index)}>
             {student.present ? "Mark absent" : "Mark present"}
           </button>

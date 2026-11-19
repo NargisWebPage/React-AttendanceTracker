@@ -1,3 +1,4 @@
+
 body {
   margin-top: 0;
   min-height: 100vh;
@@ -20,7 +21,7 @@ body {
   width: fit-content;
   min-width: 380px;
   max-width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 24px;
   background: white;
   border-radius: 16px;
@@ -73,4 +74,54 @@ button {
 
 button:hover {
   background: #4338ca;
+}
+
+/* Green color for Present */
+.present-text {
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Red color for Absent */
+.absent-text {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+button.present {
+  background: #a78bfa;
+}
+
+button.present:hover {
+  background: #8b5cf6;
+}
+
+button:focus {
+  background: #8d8df0;
+}
+
+.present-text {
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.absent-text {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
 }
