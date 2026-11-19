@@ -1,4 +1,6 @@
-import { useState } from "react";
+import  React from "react";
+import UseLocalStorage from "../hook/UseLocalStorage";
+
 
 interface Student {
   name: string;
@@ -6,7 +8,7 @@ interface Student {
 }
 
 function AttendanceTracker() {
-  const [students, setStudents] = useState<Student[]>([
+  const [students, setStudents] = UseLocalStorage<Student[]>("attendance",[
     { name: "Mokhtar", present: false },
     { name: "Zuhal", present: false },
     { name: "Samea", present: false },
