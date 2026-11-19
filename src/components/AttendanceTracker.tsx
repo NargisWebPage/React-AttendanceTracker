@@ -9,10 +9,10 @@ interface Student {
 
 function AttendanceTracker() {
   const [students, setStudents] = UseLocalStorage<Student[]>("attendance", [
-    { name: "Mokhtar", present: false },
-    { name: "Zuhal", present: false },
-    { name: "Samea", present: false },
-    { name: "Ali", present: false },
+    { name: "Ahmad", present: false },
+    { name: "Fatema", present: false },
+    { name: "Yusuf", present: false },
+    { name: "Mariam", present: false },
     { name: "Hussain", present: false },
     { name: "Zahra", present: false },
   ]);
